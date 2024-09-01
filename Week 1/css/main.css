@@ -3,11 +3,11 @@ body{
     font-size: 20px;
     margin: 0;
     padding:0;
-    background-color: darkcyan;
+    background-color: #fcf4d9;
 }
 header {
     height:130px;
-    background-color: bisque;
+    background-color: #d55b3e;
 
 }
 #theLogo{
@@ -17,11 +17,18 @@ header {
     padding-left: 10px;
     padding-top: 10px
 }
-#mainArea{
+.mainArea{
     position: relative;
     margin-left: 30%;
 }
-#mainTable, th, td{
+#aboutMain{
+    border: black 1px solid;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-left: 30px;
+    border-collapse: collapse;
+}
+.mainTable, th, td{
     border: 1px solid;
     border-collapse: collapse;
 }
@@ -34,9 +41,14 @@ header {
     height: 100%;
     align-content: center;
 }
+#about{
+    position: relative;
+    height: 100%;
+    align-items: center;
+}
 footer{
     height: 40px;
-    background-color: darkcyan;
+    background-color: #8ed2c9;
     font-size: 15px;
 }
 #footerContent{
