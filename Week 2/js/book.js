@@ -1,6 +1,6 @@
 let myVar = "Happy"
 
-function orderThis(id) {
+function orderThis(id) { //
     // alert(`Order id${id}`);
     let res = document.getElementById('results');
     res.innerHTML = ` id:${id} `;
@@ -21,18 +21,19 @@ function orderThat(id) {
     res.innerHTML = ` id:${id} myVar:${myVar} `;
 }
 
-function orderThatV2(id) {
+function orderThatV2(id) { // function that uses .push to add to myList
     let myList = ['planes', 'trains', 'automobiles'];
     myList.push("Boat");
     let oStr = " ";
     let c = "";
-    for (let i = 0; i < myList.length; i++) {
+    for (let i = 0; i < myList.length; i++) { // add to each item in order to string for later printing
         oStr += c + myList[i];
         c = ", ";
     }
     console.log("FLAG1:" + oStr);
     console.log(myList.map(i => "item:" + i));
-    let newList = myList.map(i => "item:" + i);
+    let newList = myList.map(i => "item:" + i); // add the words item and each item in table to the
+    //list for printing
     console.log("----------")
     console.log(myList);
     console.log(newList);
@@ -91,7 +92,7 @@ function orderThatV3(id) {
     console.log(`NumStudents:${studentV2.length}`);
 
     for (let i = 0; i < studentV2.length; i++) { //For loop to alert
-        // of each student name
+        // of each student name from object literal from the list
         alert(`Name:${studentV2[i].name}`);
     }
     let ct = 0; //instantiating count variable
@@ -120,6 +121,8 @@ function orderThatV4(id) {
     if(myVar === undefined){
         console.log(`${myVar} is undefined`);
     }
-    if(myVar3 === null){
+    let v1 = "";
+    if(v1 === ""){
+
     }
 }

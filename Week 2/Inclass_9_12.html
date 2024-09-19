@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    const url ="http://45.55.136.114/~dlash/CSC3700/books.php"; //made url global
+
+    // items = [
+    //   {
+    //     id :0,
+    //     cost: 12.99,
+    //     title:"American Prometheus",
+    //     author: "Bird and Sherwin",
+    //     description: "Oppenheimer, WW2,  and Atomic Bomb"
+    //   },
+    //   {
+    //     id:1,
+    //     cost: 10.99,
+    //     title:"Educated",
+    //     author: "Tara Westover",
+    //     description: "Growing up in Rural Utah and authors escape"
+    //   },
+    //   {
+    //     id:2,
+    //     cost: 11.99,
+    //     title: "The Fellowship of the Ring",
+    //     author: "J.R. Tolkien",
+    //     description: "The first book of the LOTR trilogy"
+    //   },
+    //   {
+    //     id:3,
+    //     cost: 11.99,
+    //     title: "The Two Towers",
+    //     author: "J.R. Tolkien",
+    //     description: "The Second book of the LOTR trilogy"
+    //   }
+    //   ]
+
+    function showTable(){
+      // alert("Yup its there")
+      fetch(url) //fetch asynchronusly
+              .then (response => response.json())//fetch response
+              .then(items => { //use t
+                let oStr = "" //set out to nothing
+                for(let i = 0;i<items.length;i++){
+                  let obj = items[i] //grab object
+                  let row = `<tr><td>${obj.title}</td>`// grab object title and adds row to table
+                  row += `<td>${obj.author}</td>`// grab object author and add a row
+                  row += `<td>${obj.cost}</td>`// grab object cost and add tp table
+                  row += `<td>${obj.description}</td>`// grab object desc and add to table
+                  row += `<td><button onclick="countClick(${obj.id})">Add ${obj.id}</button> </td>`// grab object desc and add to table
+
+                  row += `</tr>`// grab object desc and add to table
+
+                  oStr += row;
+                  document.getElementById("mainTable").innerHTML = oStr //change the area in Html to new added rows
+                }
+              })
+    }
+    let total = 0
+    function countClick(id){
+      // Example of asynchronus function
+      // console.log("Starting .... ")
+      // setTimeout( () => {
+      //   console.log("Time is up .... ")//anonymous function, only writing because its a called back function
+      // }, 2000)
+      // console.log("Ending ....")
+
+    fetch(url)
+            .then(response => response.json())
+            .then(items => {
+              let item = items[id];
+              total += parseInt(item.cost);
+              document.getElementById("total").innerHTML = `Total cost: ${total}`
+            })
+
+
+
+    }
+
+  </script>
+</head>
+<body onload="showTable()"> <!--After HMTL is in the document, show the table-->
+<header>
+  <h2> Our Best Sellers</h2>
+</header>
+<main>
+  <table id = "bookTable" border = 1>
+    <thead>
+    <tr><th>Title</th><th>Author</th><th>Cost</th><th>Description</th></tr>
+
+    </thead>
+    <tbody id = "mainTable"> <!--Place to inject data from JSON files through JS-->
+
+    </tbody>
+  </table>
+  <div id = "total">
+
+  </div>
+</main>
+
+</body>
+</html>
