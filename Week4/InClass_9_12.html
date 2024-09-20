@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const url = "http://45.55.136.114/~dlash/CSC3700/books.php";
+
+        // items = [
+        //     {
+        //         id : 0,
+        //         cost: 12.99,
+        //         title:"American Prometheus",
+        //         author: "Bird and Sherwin",
+        //         description: "Oppenheimer, WW2,  and Atomic Bomb"
+        //     },
+        //     {
+        //         id : 1,
+        //         cost: 10.99,
+        //         title:"Educated",
+        //         author: "Tara Westover",
+        //         description: "Growing up in Rural Utah and authors escape"
+        //     },
+        //     {
+        //         id: 2,
+        //         cost: 11.99,
+        //         title:"The Fellowship of the Ring",
+        //         author: "J.R. Tolkien",
+        //         description: "The first book of the LOTR trilogy"
+        //     },
+        //     {
+        //         id:3,
+        //         cost: 1.99,
+        //         title:"The 2 towers",
+        //         author: "J.R. Tolkien",
+        //         description: "The Second book of the LOTR trilogy"
+        //     }
+        //     ]
+        function showTable(){
+            // console.log("Starting .... ")
+            // setTimeout( () => {
+            //     console.log("Time is up ")
+            // }, 2000 )
+            // console.log("Ending .... ")
+            // let url = "http://45.55.136.114/~dlash/CSC3700/books.php";
+            fetch( url )
+                .then( response => response.json() )
+                .then( items => {
+                    let oStr = "";
+                    for ( let i=0; i<items.length; i++){
+                        let obj = items[i];
+                        let row = `<tr><td> ${obj.title}</td>`;
+                        row += `<td> ${obj.author}</td>`;
+                        row += `<td> ${obj.cost}</td>`;
+                        row += `<td> ${obj.description}</td>`;
+                        row += `<td><button onClick="countClick(${obj.id})"> Add ${obj.id} </button></td>`;
+                        // row += `<td><button onClick="countClick('${String(obj.id)}')"> Add ${obj.id} </button></td>`;
+                        row += "</tr>"
+                        oStr += row;
+                    }
+                    document.getElementById("mainTable").innerHTML = oStr;
+                })
+            // alert("Yep its there")
+
+        }
+        let total = 0;
+        function countClick( id ){
+            console.log(`id=${id}`); console.log( typeof (id ));
+            fetch( url )
+                .then( response => response.json() )
+                .then( items => {
+
+                    // let item = items[id];
+
+                    let item = items.find((obj) => {
+                        return obj.id === (id);
+                    });
+                    if ( item === undefined){
+                        console.log( `something is wrong item w/ id:${id} is undefined`)
+                        console.log( typeof (id))
+                    }
+                    total += parseInt( item.cost);
+                    document.getElementById("totals").innerHTML = `Total Cost:${total}`;
+                })
+        }
+            </script>
+</head>
+<body onLoad="showTable()">
+<header>
+    <h2> Our Best Sellers </h2>
+</header>
+<main>
+    <table id="bookTable" border="1">
+        <thead>
+        <tr><th> Title</th><th> Author</th><th>Cost </th><th>Description</th></tr>
+        </thead>
+        <tbody id="mainTable">
+
+        </tbody>
+
+    </table>
+    <div id="totals"> </div>
+</main>
+
+</body>
+</html>
