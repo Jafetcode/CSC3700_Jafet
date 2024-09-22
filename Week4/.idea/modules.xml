@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../HW1Magic/.idea/HW1Magic.iml" filepath="$PROJECT_DIR$/../HW1Magic/.idea/HW1Magic.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Week4.iml" filepath="$PROJECT_DIR$/.idea/Week4.iml" />
     </modules>
   </component>
