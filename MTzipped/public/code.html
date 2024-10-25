@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script>
+        function doStuff1(inVar) {
+            if (inVar == 10) {
+                return true;
+            }
+            return false;
+        }
+        function doStuff2(inVar) {
+            if (inVar === 10) {
+                return true;
+            }
+        }
+        if (doStuff1("10")) {
+            console.log("ONE TRUE")
+        } else console.log("One False")
+
+        if (doStuff2("10")) {
+            console.log("TWO TRUE")
+        } else console.log("TWO False")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

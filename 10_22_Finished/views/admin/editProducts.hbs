@@ -1,0 +1,24 @@
+<main>
+  <h1>{{pageHeader}}</h1>
+  <p> Edit Products Page</p>
+
+    {{#if gotUpdate }}
+        <form method="post" action="editItem">
+        <table border="1">
+        <tr> <th> Id </th><th> Title</th><th> Price</th><th>Description</th></tr>
+            <tr>
+                <td> {{product.id}} </td>
+                <input type="hidden" value="{{product.id}}" name="id">
+            <td> <input type="text" name="title" value="{{product.title}}"></td>
+            <td> <input type="text" name="price" value="{{product.price}}"></td>
+            <td> <input type="text" name="description" value="{{product.description}}"></td>
+            <td> <button type="submit"> Submit </button></td>
+            </tr>
+        </tr>
+        </table>
+        </form>
+    {{else}}
+        <h2> No products found</h2>
+    {{/if}}
+    <a href="add-product"> Add New Product </a>
+</main>

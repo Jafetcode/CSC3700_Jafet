@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Product</title>
+    <link rel='stylesheet' href="/css/main.css">
+    <link rel='stylesheet' href="/css/product.css">
+</head>
+<body>
+<header class="main-header">
+    <nav class="main-nav">
+        <ul class="main-nav-list">
+            {{#if fromShop}}
+                <li class="nav-item"><a class="active" href="/shop">Shop</a></li>
+
+            {{else}}
+                <li class="nav-item"><a href="/shop">Shop</a></li>
+            {{/if}}
+
+            {{#if fromAdmin}}
+                <li class="nav-item"><a class="active" href="/admin/add-product">Add Product2</a></li>
+            {{else}}
+                <li class="nav-item"><a href="/admin/add-product">Add Product2</a></li>
+            {{/if}}
+
+        </ul>
+    </nav>
+</header>
+<h2>Inside Main Layout</h2>
+{{{body}}}
+<div style = "background-color: aqua">
+    Void where prohibited by law. @copy; 2024 Jafet Isidoro
+</div>

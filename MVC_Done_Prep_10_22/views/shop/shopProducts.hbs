@@ -1,0 +1,21 @@
+<main>
+  <h1>{{pageHeader}}</h1>
+  <p>List of all the products...</p>
+
+    {{#if hasProducts }}
+        <table border="1">
+        <tr> <th> Title</th><th> Price</th><th>Description</th></tr>
+        {{#each prods}}
+            <tr>
+                <td> {{this.id}} </td>
+            <td> {{this.title}}</td>
+            <td> {{this.price}}</td>
+            <td> {{this.description}}</td>
+            </tr>
+        {{/each}}
+        </tr>
+        </table>
+    {{else}}
+        <h2> No products found</h2>
+    {{/if}}
+</main>

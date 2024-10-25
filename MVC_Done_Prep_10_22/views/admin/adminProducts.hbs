@@ -1,0 +1,36 @@
+<main>
+  <h1>{{pageHeader}}</h1>
+  <p>Admin Products Page</p>
+
+    {{#if hasProducts }}
+        <table border="1">
+        <tr> <th> Id </th><th> Title</th><th> Price</th><th>Description</th></tr>
+        {{#each prods}}
+            <tr>
+                <td> {{this.id}} </td>
+            <td> {{this.title}}</td>
+            <td> {{this.price}}</td>
+            <td> {{this.description}}</td>
+                <td>
+                    <form action="deleteItem/{{this.id}}" method="get" >
+                        <button type="submit">
+                            Delete {{this.id}}
+                        </button>
+                    </form>
+                </td>
+                <td>
+                    <form action="editItem/{{this.id}}" method="get" >
+                        <button type="submit">
+                            Edit {{this.id}}
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        {{/each}}
+        </tr>
+        </table>
+    {{else}}
+        <h2> No products found</h2>
+    {{/if}}
+    <a href="add-product"> Add New Product </a>
+</main>

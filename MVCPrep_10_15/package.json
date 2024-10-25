@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "node": "^20.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "scripts": {
+    "main": "app.js",
+    "start": "nodemon app.js"
+  }
+}

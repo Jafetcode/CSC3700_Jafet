@@ -1,0 +1,14 @@
+#pageTitle{
+    text-align: center;
+    align-content: center;
+    background-color: deeppink;
+    color:green;
+    height: 70px;
+}
+
+#selected{
+    padding-left:70px;
+}
+body{
+    background-color:beige;
+}

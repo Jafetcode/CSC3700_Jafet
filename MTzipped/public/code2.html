@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script>
+       let myVar = "Happy";
+       let data = [ 'cake', 'cookies', 'cupcakes' ];
+       function myFunction( data ) {
+           let ct = 0;
+           for( let i=0; i<data.length; i++ ){
+                ct += data[i].length;
+           }
+           return ct;
+       }
+       alert( "ct:" + myFunction( data ));
+
+       const myFunction =  ( data ) => {
+           let ct = 0;
+           for( let i=0; i<data.length; i++ ){
+               ct += data[i].length;
+           }
+           return ct;
+       };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

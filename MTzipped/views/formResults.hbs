@@ -1,0 +1,22 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<h2 id="header"><div style="padding-top: 20px">Harry's Hamburger Heaven  </div> </h2>
+<main >
+    {{pageTitle}}
+       {{#if gotResult}}
+           <h2> You selected the following</h2>
+            <l>
+                <li> Item: {{results.item}}</li>
+                <li> Cost: {{results.cost}}</li>
+                <li> Extras: {{results.extra}}</li>
+            </l>
+       {{else}}
+           No products to display
+       {{/if}}
+    <br /> <a href="/home"> Back to Form </a>
+</main>
+</body>
+</html>
