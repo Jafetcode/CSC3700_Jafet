@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function handleClick(){
+      let  URL = "http://localhost:8090/feed/products";
+      console.log(`fetching:${URL}`)
+      fetch(URL)
+              .then(response => response.json())
+              .then(data =>  {
+                console.log("Data=>"); console.log( data.result );
+                console.log("length=>"); console.log( data.result.length );
+                let oStr = "<table class='table table-striped'>";
+                oStr += "<tr><th> id </th><th>Title </th><th> Description </th></tr>";
+                let d = data.result;
+                for ( let i=0; i<d.length; i++){
+                     oStr += `<tr><td>${d[i].id}</td><td>${d[i].title}</td><td>${d[i].description}</td></tr>`
+                }
+                var resultsElement = document.getElementById("results");
+                resultsElement.innerHTML += oStr;
+              })
+              .catch(function(error) {
+                console.error("Fetch error:", error);
+              });
+    }
+  </script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <h1>Books Store</h1>
+  <div class="row ">
+    <div class="col-sm-4  bg-light">
+      <h4> Load Titles for sale</h4>
+      <button class='btn btn-primary' id="myButton" onclick="handleClick()"> Load external Content </button>
+    </div>
+    <div class="col-sm-8">
+      <span id="results"> results here</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
