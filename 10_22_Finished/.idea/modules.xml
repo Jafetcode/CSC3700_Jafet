@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/10_22_Finished.iml" filepath="$PROJECT_DIR$/.idea/10_22_Finished.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../HW1Magic/.idea/HW1Magic.iml" filepath="$PROJECT_DIR$/../HW1Magic/.idea/HW1Magic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LeftOff10_3/.idea/LeftOff10_3.iml" filepath="$PROJECT_DIR$/../LeftOff10_3/.idea/LeftOff10_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MVC_Done_Prep_10_22/.idea/MVC_Done_Prep_10_22.iml" filepath="$PROJECT_DIR$/../MVC_Done_Prep_10_22/.idea/MVC_Done_Prep_10_22.iml" />
     </modules>
   </component>
 </project>

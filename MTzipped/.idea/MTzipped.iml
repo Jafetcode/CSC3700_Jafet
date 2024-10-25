@@ -8,8 +8,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="MVC_Done_Prep_10_22" />
-    <orderEntry type="module" module-name="LeftOff10_3" />
-    <orderEntry type="module" module-name="HW1Magic" />
   </component>
 </module>

@@ -1,10 +1,9 @@
-<main>
-    <div class="container">
-        <div class="row md-col-6">
+<main class="flex-shrink-0 row pt-5" id="main">
+        <div class="col-md-6">
 <!---->
         </div>
-        <div class="row md-col-3">
-            <h2>Wrong Left</h2>
+        <div class="col-md-3">
+            <h2>Wrong:{{wrongCount}} Left:{{guessesLeft}}</h2>
             <form action="/show-hint" method="post">
                 <button type="button" class="btn btn-danger">Show Hint</button>
             </form>
@@ -13,8 +12,25 @@
                 <button type="button" class="btn btn-danger">Start New Game</button>
             </form>
         </div>
-        <div class="row md-col-3">
-<!--            -->
+        <div class="col-md-3 d-flex flex-column flex-shrink-0 p-3 align-item-left">
+                <ul class="nav nav-pills flex-column mb-auto pt-5" id="rightBody">
+                    <li class="nav-item">
+                        <h2 id="selectorTitle"> Right:{{correctGuess}} Wrong:{{wrongGuess}}</h2>
+                        <label for="characterSelect">Choose a Character:</label>
+                        <br>
+                        <br>
+                        <h2>Pick A Letter<select name="character" id="characterSelect"></select></h2>
+                        <br>
+                        <br>
+                        <form action="pickLetter" method="get" >
+                            <button class="btn btn-primary" type="submit" id="submitButton">
+                                Pick Letter
+                            </button>
+                        </form>
+
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </main>

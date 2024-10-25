@@ -1,12 +1,9 @@
 {
-  "name": "ww2node",
   "version": "1.0.0",
-  "main": "app1.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app1",
-    "start-script": "node app1"
-
+    "start": "app.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +11,10 @@
   "description": "",
   "devDependencies": {
     "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "mysql2": "^3.11.3"
   }
 }

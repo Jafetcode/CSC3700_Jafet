@@ -1,0 +1,54 @@
+@font-face {
+    font-family: MedievalSharp;
+    src: url(https://www.w3schools.com/howto/tryit.asp?font=MedievalSharp);
+}
+
+
+#logo{
+    width:150px;
+    padding: 10px;
+}
+#header{
+    background-color: #14322B;
+}
+#headingTitle{
+    font-size: 70px;
+    padding-left: 100px;
+    color: #C7B8BA;
+}
+body{
+    background-color: #C7B8BA;
+}
+#leftBody{
+    padding-left: 100px;
+}
+#selectorTitle{
+    font-family: MedievalSharp;
+    font-size: 50px;
+
+}
+#submitButton{
+    background-color: #14322B;
+    color: #AB8D5A;
+}
+#cardTitle{
+    font-family: MedievalSharp;
+    font-size: 45px;
+    font-weight: bold;
+
+}
+#cardDescription{
+    font-family: MedievalSharp;
+}
+#cardPic{
+    width: 400px;
+}
+#footer{
+    background-color: #14322B;
+    color: #C7B8BA;
+}
+@media (max-width: 700px){
+    #headingTitle{
+        font-size: 10vw;
+    }
+}
