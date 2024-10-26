@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6f0cd65-f91b-4f84-9d9c-d0b6a523f446" name="Changes" comment="" />
+    <list default="true" id="d6f0cd65-f91b-4f84-9d9c-d0b6a523f446" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../week6/hw_hangman/views/partials/footer.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10_22_Finished/.idea/10_22_Finished.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../10_22_Finished/.idea/10_22_Finished.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../10_22_Finished/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../10_22_Finished/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MTzipped/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../MTzipped/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week6/hw_hangman/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../week6/hw_hangman/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week6/hw_hangman/controllers/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/../week6/hw_hangman/controllers/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week6/hw_hangman/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../week6/hw_hangman/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week6/hw_hangman/routes/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/../week6/hw_hangman/routes/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week6/hw_hangman/views/gamePlay.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/../week6/hw_hangman/views/gamePlay.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week6/hw_hangman/views/layouts/main-layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/../week6/hw_hangman/views/layouts/main-layout.hbs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,9 +32,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2nG4jgKPP1KP5UB0usdLYEy0Myx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,7 +46,7 @@
     "Node.js.menu.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/jeffrey/Documents/GitHub/CSC3700_Jafet/MT_app_starter_code",
+    "last_opened_file_path": "C:/Users/jafet/Documents/GitHub/CSC3700_Jafet/MT_app_starter_code",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -49,7 +60,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23726.96" />
       </set>
     </attachedChunks>
   </component>
@@ -62,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1728586216207</updated>
       <workItem from="1728586217230" duration="4649000" />
+      <workItem from="1729970822001" duration="3000" />
     </task>
     <servers />
   </component>

@@ -1,36 +1,68 @@
 <main class="flex-shrink-0 row pt-5" id="main">
         <div class="col-md-6">
 <!---->
+            <img id=leftPic src="/imgs/hallo2.jpg" class="img-fluid" alt="A picture of the LOTR logo">
+
         </div>
         <div class="col-md-3">
-            <h2>Wrong:{{wrongCount}} Left:{{guessesLeft}}</h2>
+            <h2>Wrong:{{wrongCount}} Left:{{guesses}}</h2>
             <form action="/show-hint" method="post">
-                <button type="button" class="btn btn-danger">Show Hint</button>
+                <button type="submit" class="btn btn-danger">Show Hint</button>
             </form>
             <h2>New Game</h2>
-            <form action="/new-game" method="post">
-                <button type="button" class="btn btn-danger">Start New Game</button>
+            <form action="/new-game" method="GET">
+                <button type="submit" class="btn btn-danger">Start New Game</button>
             </form>
         </div>
-        <div class="col-md-3 d-flex flex-column flex-shrink-0 p-3 align-item-left">
-                <ul class="nav nav-pills flex-column mb-auto pt-5" id="rightBody">
+        <div class="col-md-3 d-flex flex-column flex-shrink-0 align-item-left">
+                <ul class="nav nav-pills flex-column mb-auto " id="rightBody">
                     <li class="nav-item">
                         <h2 id="selectorTitle"> Right:{{correctGuess}} Wrong:{{wrongGuess}}</h2>
-                        <label for="characterSelect">Choose a Character:</label>
                         <br>
                         <br>
-                        <h2>Pick A Letter<select name="character" id="characterSelect"></select></h2>
+                        {{hiddenWord1}}
+                        {{startWord}}
+                        {{word}}
                         <br>
                         <br>
-                        <form action="pickLetter" method="get" >
+                        <form action="/game" method="POST" >
+                            <h2>Pick A Letter<select name="character" id="characterSelect">
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                                <option value="I">I</option>
+                                <option value="J">J</option>
+                                <option value="K">K</option>
+                                <option value="L">L</option>
+                                <option value="M">M</option>
+                                <option value="N">N</option>
+                                <option value="O">O</option>
+                                <option value="P">P</option>
+                                <option value="Q">Q</option>
+                                <option value="R">R</option>
+                                <option value="S">S</option>
+                                <option value="T">T</option>
+                                <option value="U">U</option>
+                                <option value="V">V</option>
+                                <option value="W">W</option>
+                                <option value="X">X</option>
+                                <option value="Y">Y</option>
+                                <option value="Z">Z</option>
+                            </select></h2>
                             <button class="btn btn-primary" type="submit" id="submitButton">
                                 Pick Letter
                             </button>
                         </form>
+                        <img id=leftPic src="/imgs/hallo2.jpg" class="img-fluid" alt="A picture of the LOTR logo">
 
                     </li>
                 </ul>
             </div>
-        </div>
-    </div>
+
 </main>
+{{>footer}}

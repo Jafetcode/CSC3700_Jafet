@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Use the routes directly
-app.use('/game', gameRoutes);
+app.use('/', gameRoutes);
 
 app.use((req, res, next) => {
     res.status(404).render('404', { pageTitle: 'Error Page Not Found' });

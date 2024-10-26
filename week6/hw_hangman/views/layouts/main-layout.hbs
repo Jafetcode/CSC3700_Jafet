@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>{{pageTitle}} </title>
-    <link rel='stylesheet' href="/public/css/main.css">
+    <link rel='stylesheet' href="/css/main.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
     <link href='https://fonts.googleapis.com/css?family=MedievalSharp' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-<header class="main-header">
-    <nav class="main-nav">
-        <ul class="main-nav-list">
-            <li class="nav-item"><a href="/game">Halloween Hangman</a></li>
-        </ul>
-    </nav>
+<header id="header">
+    <div class="container-fluid">
+        <img id=logo src="/imgs/hangmanLogo.PNG" class="img-fluid" alt="A picture of the LOTR logo">
+        <a class="navbar-brand" style="margin-left: 20px" id="headingTitle">Halloween Hangman</a>
+    </div>
 </header>
 {{{ body }}}
 </body>
