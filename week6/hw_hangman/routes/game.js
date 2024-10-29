@@ -4,12 +4,14 @@ const router = express.Router();
 const gameController = require("../controllers/game");
 
 // const App = require("/models/Words");
-router.get('/',gameController.getGame);
+router.get('/',gameController.newGame);
 
 router.get('/new-game',gameController.newGame);
 
 router.post('/game',gameController.getLetter);
-// router.post('/show-hint',gameController.getGame);
+router.post('/game',gameController.removeLetter);
+
+router.post('/show-hint',gameController.newGame);
 
 
 exports.routes = router;

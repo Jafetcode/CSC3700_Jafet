@@ -5,7 +5,7 @@
 
         </div>
         <div class="col-md-3">
-            <h2>Wrong:{{wrongCount}} Left:{{guesses}}</h2>
+            <h2>Wrong: Left:</h2>
             <form action="/show-hint" method="post">
                 <button type="submit" class="btn btn-danger">Show Hint</button>
             </form>
@@ -17,7 +17,7 @@
         <div class="col-md-3 d-flex flex-column flex-shrink-0 align-item-left">
                 <ul class="nav nav-pills flex-column mb-auto " id="rightBody">
                     <li class="nav-item">
-                        <h2 id="selectorTitle"> Right:{{correctGuess}} Wrong:{{wrongGuess}}</h2>
+                        <h2 id="selectorTitle"> Right:{{rightGuess}} Wrong:{{wrongGuess}}</h2>
                         <br>
                         <br>
                         {{hiddenWord1}}
